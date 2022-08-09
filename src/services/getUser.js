@@ -1,4 +1,6 @@
-export const getAllUsers = () => {
-  return fetch('http://localhost:8000/api/v1/users')
-    .then(res => res.json())
+import axios from "axios"
+
+export const getAllUsers = async () => {
+  const result = await axios.get("/usuarios")
+  return result.data
 }
