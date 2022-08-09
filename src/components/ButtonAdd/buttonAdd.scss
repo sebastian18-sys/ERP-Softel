@@ -1,0 +1,37 @@
+.button__add {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 15px;
+
+  .button__addContainer {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 7px 10px;
+    cursor: pointer;
+    
+    & > svg, & > span {
+      color: var(--text-color) ;
+    }
+
+    &:hover {
+      background-color: transparent;
+      box-shadow:  0 0 0 1px;
+      color: var(--primary-color);
+      transition: .3s;
+      z-index: 99;
+      // color: #000;
+    }
+
+    &:hover > span, &:hover > svg {
+      color: var(--primary-color);
+    }
+  }
+}

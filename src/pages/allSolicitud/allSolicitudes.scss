@@ -1,0 +1,36 @@
+.allSolicitudes {
+  display: flex;
+  width: 100%;
+  
+
+  .allSolicitudes__container {
+    flex: 8;
+    background-color: var(--background);
+  }
+
+  .allSolicitudes__title {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 15px;
+    margin: 40px 15px 0 15px;
+
+    .allSolicitudes__estado {
+      & > p {
+        border: 1px solid #444;
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 15px;
+
+        width: 200px;
+        margin: 0 auto;
+      }
+    }
+
+    .allSolicitudes__add {
+      & svg {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

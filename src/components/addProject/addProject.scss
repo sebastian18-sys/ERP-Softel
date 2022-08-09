@@ -1,0 +1,67 @@
+.addProject {
+  margin: 40px;
+
+  .addProject__container {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    padding: 15px 40px;
+
+    .addProject__formText {
+      display: flex;
+      // align-items: center;
+      margin-bottom: 25px;
+
+      & > label {
+        margin-right: 20px;
+        flex: 1;
+        color: var(--text-color);
+      }
+
+      & > input {
+        width: 80%;
+        padding: 10px 5px;
+        outline: none;
+        background-color: var(--background-input);
+        border: 1px solid rgb(159 159 159);
+        color: var(--text-color);
+      }
+
+      & > textarea {
+        width: 80%;
+        height: 100px;
+        resize: none;
+        padding: 10px 5px;
+        outline: none;
+        font-family: sans-serif;
+        border: 1px solid rgb(159 159 159);
+        background-color: var(--background-input);
+        color: var(--text-color);
+      }
+    }
+
+    .create__buttonSave {
+      margin: 30px 0;
+      display: flex;
+      justify-content: flex-end;
+
+      & > button {
+        padding: 12px 15px;
+        border-radius: 5px;
+        background-color: var(--primary-color);
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+
+        &:hover {
+          background-color: transparent;
+          box-shadow:  0 0 0 1px;
+          color: var(--primary-color);
+          transition: .3s;
+          z-index: 99;
+        }
+      }
+
+    }
+  }
+}

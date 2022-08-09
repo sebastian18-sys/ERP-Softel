@@ -1,0 +1,36 @@
+.delete {
+  text-align: center;
+  padding: 10px;
+
+  & > h2 {
+    color: var(--text-color);
+  }
+
+  .delete__button {
+    margin: 15px 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    /* width: 20%; */
+  }
+
+  .delete__buttonDelete {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow:  0 0 0 1px;
+      color: var(--primary-color);
+      transition: .3s;
+      z-index: 99;
+    }
+  }
+}
+
+
+

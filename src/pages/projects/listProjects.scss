@@ -1,0 +1,34 @@
+.projects {
+  display: flex;
+  width: 100%;
+  
+
+  .projects__container {
+    flex: 8;
+    background-color: var(--background);
+
+    .projects__info {
+      
+    }
+
+    .projects__title {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 15px;
+      margin: 40px 15px 0 15px;
+
+      // & > header > p {
+      //   font-size: 25px;
+      //   color: gray;
+      //   padding: 0 0 20px 0;
+      //   border-bottom: 1px solid lightgray;
+      // }
+    }
+
+    .projects__actions {
+      & svg {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.projects__titleHeader {
+
+  & > header > p {
+    font-size: 25px;
+    color: var(--text-title);
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.projects__filter {
+  display: flex;
+  margin: 40px 0;
+  align-items: center;
+
+  & > p {
+    margin-right: 10px;
+    color: var(--text-color);
+  }
+
+  & > input {
+    padding: 9px 7px;
+    outline: none;
+    background-color: var(--background-input);
+    border: 1px solid rgb(159 159 159);
+    color: var(--text-color);
+    min-width: 250px;
+  }
+}

@@ -1,0 +1,65 @@
+.table {
+
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: scroll;
+
+    & td, & th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        // border-radius: 20px;
+    }
+
+    & td > img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .table__head {
+        text-align: center;
+        height: 60px;
+        color: #444;
+
+        & tr {
+            background-color: var(--background);
+        }
+    }
+    
+    .table__body {
+        text-align: center;
+
+        & tr {
+            background-color: var(--navbar);
+            color: var(--text-color);
+        }
+
+        & tr:hover {
+            background-color: var(--table-hover);
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            // padding: 0 10px;
+        }
+
+        .status {
+            padding: 5px;
+            border-radius: 5px;
+
+            &.Approved {
+                color: green;
+                background-color: rgba(0, 128, 0, 0.151);
+            }
+
+            &.Pending {
+                color: goldenrod;
+                background-color: rgba(189, 189, 3, 0.103);
+            }
+        }
+    }
+
+}
+
+
