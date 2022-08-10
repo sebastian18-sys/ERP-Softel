@@ -22,7 +22,7 @@ export default function ListOfProjects() {
   const [getId, setGetId] = useState(null)
 
   // Hooks
-  const { dataProjects, filterProjects, setDataProjects } = useProjects()
+  const { dataProjects, setCount, filterProjects, setDataProjects } = useProjects()
   const rowsPerPage = 5; //rows per table
   const [page, setPage] = useState(1) //initial page
   const { slice, tableRange } = useTable(dataProjects, page, rowsPerPage)
@@ -39,7 +39,13 @@ export default function ListOfProjects() {
 
   //Close Modal
   const handleCloseEdit = () => {
+    setCount(count => count + 1)
     showEdit.handleClose()
+  }
+
+  const handleCloseCreate = () => {
+    setCount(count => count + 1)
+    showCreate.handleClose()
   }
 
   
@@ -96,7 +102,7 @@ export default function ListOfProjects() {
         </section>
         {showCreate.showModal && 
           <Modal title="Crear proyecto" onClose={showCreate.handleClose}>
-            <AddProject />
+            <AddProject onClose={handleCloseCreate} />
           </Modal>
         }
         {showEdit.showModal && (

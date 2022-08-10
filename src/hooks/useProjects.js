@@ -5,6 +5,7 @@ export const useProjects = () => {
 
   const [dataProjects, setDataProjects] = useState([])
   const [filterProjects, setFilterProjects] = useState([])
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
 
@@ -15,11 +16,12 @@ export const useProjects = () => {
       console.error(err)
     })
 
-  }, [])
+  }, [count])
 
   return {
     dataProjects,
     filterProjects,
+    setCount,
     setDataProjects,
     setFilterProjects
   }

@@ -1,17 +1,17 @@
 import React from 'react'
-import { useNotification } from '../../hooks/useNotification'
+// import { useNotification } from '../../hooks/useNotification'
 import "./addProject.scss"
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { postProject } from '../../services/postProject'
 
-export default function AddProject() {
+export default function AddProject({ onClose }) {
 
   const saved = JSON.parse(localStorage.getItem('user'));
   const getUserLS = saved[0]
   const { register, handleSubmit } = useForm()
   const navigate = useNavigate()
-  const { handleNotification } = useNotification()
+  // const { handleNotification } = useNotification()
 
   const onSubmit = async (values) => {
     try {
@@ -19,6 +19,7 @@ export default function AddProject() {
       console.log("Data ->", data)
       if(data) {
         navigate("/proyectos", {replace: true})
+        onClose()
       } else {
         console.log("Datos invalidos")
       }
@@ -60,7 +61,7 @@ export default function AddProject() {
           />
         </div>
         <div className='create__buttonSave'>
-          <button onClick={handleNotification}>Guardar</button>
+          <button>Guardar</button>
         </div>
       </form>
     </section>
