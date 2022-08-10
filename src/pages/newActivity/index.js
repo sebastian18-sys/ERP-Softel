@@ -36,7 +36,7 @@ export default function NewActivity() {
 
       <Helmet>
         <meta charSet='utf-8'></meta>
-        <title>Softel || Actividades</title>
+        <title>Softel || Añadir Actividad</title>
       </Helmet>
 
       <Sidebar />
